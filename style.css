@@ -143,10 +143,15 @@ img { display: block; max-width: 100%; }
 .project-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; padding-top: 1rem; border-top: 1px solid currentColor; }
 .tech-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
 .tech-list li { padding: .34rem .62rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .7rem; font-weight: 600; }
-.project-link-group { display: flex; gap: .8rem; }
-.project-link { flex: 0 0 auto; padding: .55rem .8rem; border: 1px solid var(--line); border-radius: 999px; font-size: .78rem; font-weight: 700; transition: background .2s ease, color .2s ease; }
+.project-link-group { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .55rem; }
+.project-link { flex: 0 0 auto; min-width: 92px; padding: .55rem .8rem; border: 1px solid var(--line); border-radius: 999px; font-size: .78rem; font-weight: 700; text-align: center; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.project-link-primary { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .project-link:hover { background: var(--ink); color: var(--paper); }
+.project-link-primary:hover { background: var(--violet); border-color: var(--violet); color: #fff; }
+.project-link:focus-visible, .project-archive a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.project-card-featured .project-link-primary { background: #fff; border-color: #fff; color: var(--violet); }
 .project-card-featured .project-link:hover { background: white; color: var(--violet); }
+.project-card-featured .project-link-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
 
 .project-archive { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.35rem .2rem; border-bottom: 1px solid var(--line); }
 .project-archive > div { display: flex; align-items: center; gap: 1.4rem; }
@@ -154,7 +159,8 @@ img { display: block; max-width: 100%; }
 .project-archive strong { display: block; font-family: Manrope, sans-serif; font-size: 1rem; }
 .project-archive small { display: block; margin-top: .15rem; color: var(--muted); }
 .project-archive a { font-size: .8rem; font-weight: 700; border-bottom: 1px solid currentColor; }
-.project-archive .archive-links { gap: 1rem; }
+.project-archive .archive-links { flex-wrap: wrap; justify-content: flex-end; gap: .6rem 1rem; }
+.project-availability { color: var(--muted); font-size: .75rem; font-weight: 600; letter-spacing: .02em; text-align: right; }
 
 .expertise-section { background: var(--ink); color: var(--paper); }
 .expertise-section .section-heading > p { color: color-mix(in srgb, var(--paper) 68%, transparent); }
